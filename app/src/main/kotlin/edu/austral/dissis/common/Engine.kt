@@ -40,7 +40,6 @@ class Engine : GameEngine{
         if (pieceToMove == null){
             return InvalidMove("That position is empty, try another one!")
         }else if (pieceToMove.color != turnStrategy.getCurrentColor()) {
-//            It's the white team's turn
             return InvalidMove("It's the " + turnStrategy.getCurrentColor().name.lowercase() + " team's turn.")
         }
         else if (pieceToMove.validator.validateMovement(currentBoard, Movement(pieceToMove, toPosition)) is GameOver){
@@ -115,5 +114,9 @@ class Engine : GameEngine{
             names.add(name)
         }
         return names.toList()
+    }
+
+    fun getAdapter(): Adapter{
+        return adapter
     }
 }

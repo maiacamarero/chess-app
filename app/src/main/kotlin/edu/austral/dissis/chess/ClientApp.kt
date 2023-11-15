@@ -12,7 +12,6 @@ import javafx.application.Application.launch
 import javafx.scene.Scene
 import javafx.stage.Stage
 
-
 fun main() {
     launch(GameApplication::class.java)
 }
@@ -24,7 +23,6 @@ class GameApplication : Application() {
         const val GAMETITLE = "Chess"
         val myClient = MyClient()
     }
-
 
     override fun start(primaryStage: Stage) {
         primaryStage.title = GAMETITLE

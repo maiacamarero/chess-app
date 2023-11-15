@@ -1,6 +1,9 @@
 package edu.austral.dissis.payload
 
-import edu.austral.dissis.common.Position
+import edu.austral.dissis.chess.gui.Position
 
 
-data class MovePayload(val from: Position, val to: Position)
+data class MovePayload(
+    val from: Position,
+    val to: Position
+)
