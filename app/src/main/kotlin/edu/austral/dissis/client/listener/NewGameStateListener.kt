@@ -1,8 +1,6 @@
 package edu.austral.dissis.client.listener
 
 import edu.austral.dissis.chess.gui.*
-import edu.austral.dissis.common.Position
-import edu.austral.dissis.common.piece.PieceColor
 import edu.austral.dissis.payload.PiecePayload
 import edu.austral.dissis.payload.NewGameStatePayloadMove
 import edu.austral.ingsis.clientserver.Message
@@ -26,14 +24,5 @@ class NewGameStateListener(private val root : GameView) : MessageListener<NewGam
         }
         return chessPieces.toList()
     }
-
-    private fun getPiecePosition(position: Position): edu.austral.dissis.chess.gui.Position {
-        return edu.austral.dissis.chess.gui.Position(position.x, position.y)
-    }
-
-    private fun getPlayerColor(color: PieceColor): PlayerColor {
-        return if (color == PieceColor.WHITE) PlayerColor.WHITE else PlayerColor.BLACK
-    }
-
 
 }
