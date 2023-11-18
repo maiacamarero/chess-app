@@ -145,4 +145,8 @@ class Engine : GameEngine{
         }
         return names.toList()
     }
+
+    fun getAdapter(): Adapter{
+        return adapter
+    }
 }
