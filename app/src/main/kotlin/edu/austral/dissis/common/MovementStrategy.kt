@@ -58,7 +58,7 @@ class MovementStrategy(private val pieceFactory: PieceFactory) {
             piecesPositionsCopy.remove(fromPosition)
             piecesPositionsCopy.remove(toPosition)
             piecesPositionsCopy[toPosition] = pieceToMove
-        }else if (middlePiece != null && (pieceToMove.id.takeWhile { it.isLetter() } == "pawn" || pieceToMove.id.takeWhile { it.isLetter() } == "queen")) {
+        }else if (middlePiece != null && (pieceToMove.pieceType.name.lowercase() == "pawn" || pieceToMove.id.takeWhile { it.isLetter() } == "queen")) {
             piecesPositionsCopy.remove(middlePosition)
         }
     }
@@ -76,7 +76,7 @@ class MovementStrategy(private val pieceFactory: PieceFactory) {
 
     private fun shouldPromote(pieceToMove: Piece, toPosition: Position, board: Board): Boolean {
         return (toPosition.y == 1 || toPosition.y == board.getSizeY()) &&
-                (pieceToMove.id.takeWhile { it.isLetter() } == "pawn")
+                (pieceToMove.pieceType.name.lowercase() == "pawn")
     }
 
     private fun promotePawn(pieceToMove: Piece, toPosition: Position, piecesPositionsCopy: MutableMap<Position, Piece>) {
