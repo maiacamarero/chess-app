@@ -8,6 +8,8 @@ import edu.austral.dissis.common.result.FinishGameResult
 import edu.austral.dissis.common.result.Result
 import edu.austral.dissis.common.result.SuccessfulResult
 import edu.austral.dissis.lan.payload.*
+import edu.austral.dissis.lan.server.listener.InitServerListener
+import edu.austral.dissis.lan.server.listener.MoveListener
 import edu.austral.ingsis.clientserver.Message
 import edu.austral.ingsis.clientserver.Server
 import edu.austral.ingsis.clientserver.ServerBuilder
