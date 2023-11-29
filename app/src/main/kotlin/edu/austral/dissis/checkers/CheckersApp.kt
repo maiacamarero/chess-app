@@ -25,7 +25,7 @@ class CheckersApp : Application() {
     override fun start(primaryStage: Stage) {
         primaryStage.title = GameTitle
 
-        val root = GameView(gameAdapter, imageResolver)
+        val root = GameView(imageResolver)
         primaryStage.scene = Scene(root)
 
         primaryStage.show()
