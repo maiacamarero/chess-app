@@ -22,6 +22,7 @@ class CheckersApp : Application() {
     }
 
 
+
     override fun start(primaryStage: Stage) {
         primaryStage.title = GameTitle
 

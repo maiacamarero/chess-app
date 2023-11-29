@@ -20,6 +20,7 @@ class MyServer(
     private val builder: ServerBuilder = NettyServerBuilder.createDefault()
 ) {
     private val server: Server
+
     init {
         server = buildServer()
         server.start()
