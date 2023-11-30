@@ -23,7 +23,7 @@ class CheckersTurnStrategy(
     }
 
     override fun getCurrentColor(): PieceColor {
-        return pieceToMove.color
+        return currentTurn.getCurrentColor()
     }
 
     private fun hasCaptureMoves(board: Board, piece: Piece): Boolean {
