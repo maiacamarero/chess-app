@@ -17,6 +17,6 @@ class CheckersWinCondition : WinCondition {
         if (opponentPieces.isEmpty()){
             return FinishGameResult(pieceToMove.color)
         }
-        return SuccessfulResult(Game(board, pieceToMove.color, CheckersWinCondition()))
+        return SuccessfulResult(Game(board, opponentColor, CheckersWinCondition()))
     }
 }

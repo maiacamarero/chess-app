@@ -80,7 +80,7 @@ class MovementStrategy(private val pieceFactory: PieceFactory) {
     }
 
     private fun promotePawn(pieceToMove: Piece, toPosition: Position, piecesPositionsCopy: MutableMap<Position, Piece>) {
-        val pieceId = pieceToMove.id.filter { it.isDigit() }
+        val pieceId = pieceToMove.id.                                                                                                                                           filter { it.isDigit() }
         piecesPositionsCopy[toPosition] = pieceFactory.createPiece("queen", pieceToMove.color, pieceId.toInt())
     }
 
